@@ -19,27 +19,27 @@ print("9. Logout")
 
 choice=("Enter a number from 1-7")
 if choice==1:
-    def Create Customer()
+    Create Customer()
 elif choice==2:
-    def Create Account()
+    Create Account()
 elif choice==3:
-    def Deposit()
+    Deposit()
 elif choice==4:
-    def Withdraw()
+    Withdraw()
 elif choice==5:
-    def Transfer Money()
+    Transfer Money()
 elif choice==6:
-    def Transaction History()
+    Transaction History()
 elif choice==7:
-    def Change Intrest rate()
+    Change Intrest rate()
 elif choice==8:
-    def Update Accounts Details()
+    Update Accounts Details()
 elif choice==9:
     print("Thanks for using the service.")
     break
 else:
     print("Invalid choice.")
-
+'''
 #====================================================================
 print("========Customer Menu========")
 print("1. Deposit")
@@ -49,7 +49,7 @@ print("4. Transaction History")
 print("5. View Interest rate")
 print("6. View All Accounts")
 print("7. Logout")
-
+'''
 choice=("Enter a number from 1-7")
 if choice==1:
     def Deposit()
@@ -66,5 +66,19 @@ elif choice==6:
     break
 else:
     print("Invalid choice.")
-
+''''
 #=========================================================
+
+    
+ '''
+    #=======
+name=input("Enter Name :")
+address=input("Enter Address:")
+date_of_birth=input("Enter D.O.B :")
+age=int(input("Enter Age :"))
+Username=input("Enter username :")
+password=input("Enter password :")
+
+def create_customers_and_users():
+    Customers=get_customer_info()
+   with open('users.txt','a')
