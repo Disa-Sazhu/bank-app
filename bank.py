@@ -26,7 +26,7 @@ def create_customer():
         except FileNotFoundError:
             pass
         password = input("Enter password for new customer: ")
-        with open("customers.txt", "a") as file:
+        with open("users.txt", "a") as file:
             file.write(f"{customer_id},{password}\n")
 
         print(f"Customer '{customer_id}' created successfully!")
@@ -69,7 +69,7 @@ def create_account():
 
 account_details = create_account()
 if account_details:
-    with open("users.txt", "a") as file:
+    with open("customers.txt", "a") as file:
         file.write(f"({account_details[0]}, {account_details[1]}, {account_details[2]})\n")
 
     with open("userdetails.txt", "a") as file:
@@ -91,26 +91,23 @@ else:
 #=============================deposit function============================
 def deposit(account_number, amount):
     global accounts
-
+    amount = float(input("Enter amount to deposit: "))
     if amount <= 0:
         print("Deposit amount must be positive.")
         return
 
     for account in accounts:
-        if account[0] == account_number: 
-            account[6] += amount  
-            print(f"Deposit successful! New balance: {account[6]}")
-            with open("userdetails.txt", "a") as file:
-                file.write(f"({account[0]}, {account[2]}, {account[3]}, {account[4]}, {account[5]}, {account[6]})\n")
-
-            return
-    
+        if account_details[0] == account_number: 
+            account_details[6] += amount  
+            print(f"Deposit successful! New balance: {account_details[6]}")
+            return    
     print("Account not found.")
+deposit()
 # def deposit_money():
 #     global next_account_number
 #     for account_details in accounts:
 #         if account_details[0] == next_account_number:
-#             amount = float(input("Enter amount to deposit: "))
+#             
 #             if amount <= 0:
 #                 print("Deposit amount must be positive.")    
 #                 account_details[6] += amount

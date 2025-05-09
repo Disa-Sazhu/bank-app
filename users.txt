@@ -1,3 +1,4 @@
-
-(1001, C_001, disa, nelliyady)
-(1001, C_002, Dxy)
+C_001,cus123
+C_002,cus234
+C_003,cus345
+C_004,cus456
